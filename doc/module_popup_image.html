@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="fi">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<h3><font face="Arial">STS module configuration: popup image module</font></h3>
+<p><b>Version</b>: v1.0.0<br>
+<b>File</b>: catalog/includes/modules/sts/sts_popup_image.php<br>
+<b>Author</b>: Christophe Buchi aka Rigadin2</p>
+<p>
+  <font face="Arial">This is the module used when the 
+  “popup_image.php” page is displayed. If it is not installed or is disabled, the
+<a href="module_default.html">default module</a> will be used. </font></p>
+<p>
+<img border="0" src="images/admin_popup_image_1_0_0.gif" width="224" height="222"></p>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="17%"><b>Parameter</b></td>
+    <td width="83%"><b>Comment</b></td>
+  </tr>
+  <tr>
+    <td width="17%">Use templates for <span lang="en-us">popup_image</span> page</td>
+    <td width="83%">Select 'True' to use or 'False' to continue using the 
+    default <span lang="en-us">osC popup_image.php file</span>. Keep it set to 'False' if you don't have 
+	<span lang="en-us">a </span>specific template 
+    for your <span lang="en-us">popup_image.php file</span>.</td>
+  </tr>
+  <tr>
+    <td width="17%">Files to include</td>
+    <td width="83%">List the files to include when displaying “popup_image.php”, 
+    separated by semicolons. <font face="Arial">Those files must be located in 
+    “catalog/includes/modules/sts_inc” folder and generally contains code to 
+    build extra placeholders. For example: If you need to use the $templatedir$ 
+	placeholder, add the file general.php separated by a semicolon( 
+	popup_image.php;general.php)</font></td>
+  </tr>
+  </table>
+<p><b>How it works:</b></p>
+<p>When enabled, the module looks in the template folder 
+(includes/sts_templates/single by default) if a template named <b>
+popup_image.php.html</b> exists. If not, do not use any template and just 
+display what comes out of popup_image.php.</p>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="fi">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<h3><font face="Arial">STS module configuration: index module</font></h3>
+<p><b>Version</b>: v2.1.0<br>
+<b>File</b>: catalog/includes/modules/sts/sts_product_info.php<br>
+<b>Author</b>: Christophe Buchi aka Rigadin2</p>
+<p>
+  <font face="Arial">This is the module used when the 
+  “product_info.php” page is displayed. If it is not installed or is disabled, the
+<a href="module_default.html">default module</a> will be used. </font></p>
+<p>
+<img border="0" src="images/admin_product_info_2_1_0.gif" width="224" height="398"></p>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="17%"><b>Parameter</b></td>
+    <td width="83%"><b>Comment</b></td>
+  </tr>
+  <tr>
+    <td width="17%">Use templates for product info page</td>
+    <td width="83%"><font face="Arial">Select 'True' to use or 'False' to continue using the STS default module. Keep 
+it set to 'False' if you don't have specific templates for your products.</font></td>
+  </tr>
+  <tr>
+    <td width="17%">Enable STS3 compatibility mode</td>
+    <td width="83%"><font face="Arial">Select 'True' if you have templates like “product_info.php.html” or 
+“product_info.php_ID.html” which are not using $content but all the specific 
+product info variables. This is for compatibility with STS v2 and v3 templates, 
+as STS v4 works a bit different with product info templates. To reduce parse 
+time, I recommend setting this to ‘False’ and use a content template instead.</font></td>
+  </tr>
+  <tr>
+    <td width="17%">Files for normal template</td>
+    <td width="83%">List the files to include when displaying “product_info.php” 
+    using a general template only (like the old STS versions do), separated by 
+    semicolons. See STS default module for more details.<br>
+    The default value is: “sts_user_code.php”.</td>
+  </tr>
+  <tr>
+    <td width="17%">Files for content template</td>
+    <td width="83%">List the files to include when displaying “product_info.php” 
+    using a template for the content part of the page plus a general template 
+    (the one with header, columns, footer).<br>
+    The default value is: “sts_user_code.php;product_info.php”.</td>
+  </tr>
+  </table>
+<p>&nbsp;</p>
+<p><b>How it works, general template:</b></p>
+<p>Main templates are templates containing the columns, header and footer. The 
+center of the page only contains the $content placeholder.<br>
+With this module you have the possibility to define a separate &quot;content 
+template&quot; that will replace the $content of the main template. Content templates 
+must be located in the &quot;content&quot; folder inside the templates folder (<b>includes/sts_templates/test/content</b> 
+by default)</p>
+<p>When <span lang="en-us">the </span>module is enabled, it looks in the template folder 
+<span lang="en-us">to see </span>what templates exist. 
+It is possible to define templates based on the product ID or it's category ID. 
+Templates must be located in the templates folder (includes/sts_templates/single 
+by default) .It works <span lang="en-us">as </span>so (first found first used):</p>
+<p>1. Check for a main template based on the product ID, for example product 
+with ID 4:</p>
+<p>1.1 Use <b>product_info.php_4.html</b> if exists.</p>
+<p>2. Check for category specific main template, based on the category ID where 
+the product is located. (Example below with a product located in category 22, 
+located in category 11)</p>
+<p>2.1 Use <b>product_info.php_c11_22.html</b> if exists.</p>
+<p>2.2 Use <b>product_info.php_c11.html</b> if exists.</p>
+<p>2.3 Use <b>product_info.php.html</b> if exists.</p>
+<p>3. No specific template found, use default template <span lang="en-us">as</span> defined in 
+<span lang="en-us">the </span>default 
+module (by default it is <b>sts_template.html</b>)</p>
+<p>&nbsp;</p>
+<p>Now that we have a main template, look if there is a content template, based 
+on product ID and the category where it belongs: example with product ID4:</p>
+<p>1.1 Use <b>product_info.php_4.html</b> if exists.</p>
+<p>2. Check for category specific content template, based on the category ID 
+where the product is located. (Example below with a product located in category 
+22, located in category 11)</p>
+<p>2.1 Use <b>product_info.php_c11_22.html</b> if exists.</p>
+<p>2.2 Use <b>product_info.php_c11.html</b> if exists.</p>
+<p>2.3 Use <b>product_info.php.html</b> if exists.</p>
+<p>If no content template is found then do no<span lang="en-us">t</span> use any, $content will come from 
+the original catalog/product_info.php .</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

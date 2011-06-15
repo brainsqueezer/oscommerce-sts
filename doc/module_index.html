@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="fi">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<h3><font face="Arial">STS module configuration: index module</font></h3>
+<p><b>Version</b>: v2.0.0<br>
+<b>File</b>: catalog/includes/modules/sts/sts_index.php<br>
+<b>Author</b>: Christophe Buchi aka Rigadin2</p>
+<p>
+  <font face="Arial">This is the module used when the 
+  “index.php” page is displayed. If it is not installed or is disabled, the 
+  <a href="module_default.html">default module</a> will be used. </font></p>
+<p><img border="0" src="images/admin_index_2_0_0.gif" width="202" height="305"></p>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="15%"><b>Parameter</b></td>
+    <td width="85%"><b>Comment</b></td>
+  </tr>
+  <tr>
+    <td width="15%">Use templates for index page</td>
+    <td width="85%">Select 'True' to use or 'False' to continue using the STS 
+    default module.</td>
+  </tr>
+  <tr>
+    <td width="15%">Files for index.php template</td>
+    <td width="85%">List the files to include when displaying “index.php”, 
+    separated by semicolons. <font face="Arial">Those files must be located in 
+    “catalog/includes/modules/sts_inc” folder and generally contains code to 
+    build extra placeholders.<br>
+    For example: <br>
+    By default the file sts_user_code is included, but if you don't use any 
+    placeholder defined inside this file, just remove it from the list. On the 
+    other hand, if you add a contribution which adds some new placeholders, like 
+    the famous Header Tags Controller, then you only need to add the file in the 
+    list. The files must be separated by semicolons.</font></td>
+  </tr>
+  <tr>
+    <td width="15%">Check parent templates</td>
+    <td width="85%">If a template is not found for a particular category, the 
+    module will look if there is a template for the parent category, or the 
+    parent's parent and so on. Option <span lang="en-us">as it </span>can be disabled if not needed, thus saving 
+    some parsing time.</td>
+  </tr>
+  </table>
+<p>&nbsp;</p>
+<p><b>How it works</b>:</p>
+<p>When module is enabled, it looks in the template folder <span lang="en-us">to 
+see </span>what templates exist. 
+It is possible to define templates for each manufacturer as well as for each 
+category. Templates must be located in the templates folder 
+(includes/sts_templates/test by default) .It works <span lang="en-us">as </span>so<span lang="en-us"> 
+(</span>first found first used)<span lang="en-us">:</span></p>
+<p>1. If a manufacturer is selected in the URL, for example <b>
+index.php?manufacturers_id=4</b>, check for manufacturer templates.</p>
+<p>1.1 Use <b>index.php_mfr_4.html</b> if exists.</p>
+<p>1.2 Use&nbsp; <b>index.php_mfr.html</b> if exists, otherwise jump to 2.1 .</p>
+<p>2. Check for category specific templates, based on the category ID. (Example 
+below with category 33, located in category 22, located in category 11)</p>
+<p>2.1 Use <b>index.php_11_22_33.html</b> if exists.</p>
+<p>2.2 If parameter &quot;Check parent templates&quot; is enabled, use <b>
+index.php_11_22.html</b> if exists. If parameter is disabled, jump to 2.4 .</p>
+<p>2.3 Use <b>index.php_11.html</b> if exists (<b>index.php_0.html</b> for the 
+home page).</p>
+<p>2.4 Use <b>index.php.html</b> if exists.</p>
+<p>3. No specific template found, use default template like defined in default 
+module (by default it is <b>sts_template.html</b>)</p>
+<p><u>Note</u>: If you don't create any template corresponding to points 1.1 to 
+2.3, you don't need to enable this module, the default one will do the same job 
+in less time.</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

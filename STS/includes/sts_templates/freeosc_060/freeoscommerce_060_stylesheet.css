@@ -1,0 +1,312 @@
+﻿@charset "utf-8";
+
+/* CSS Document
+
+    Copyright (c) Freeoscommerce.com 2009
+
+	This file is part of a freeoscommerce.com template.  Please visit http://www.freeoscommerce.com for licensing and other information.
+*/
+
+body {
+margin: 0px;
+padding: 0px;
+background: #000000;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+}
+
+div#wrapper1 {
+position: relative;
+width: 100%;
+min-height: 500px;
+margin: 30px 0px 0px 0px;
+overflow: auto;
+}
+
+div#wrapper2 {
+z-index: 3;
+position: relative;
+left: 50%;
+width: 949px;
+padding: 94px 0px 94px 0px;
+margin-left: -474px;
+min-height: 300px;
+}
+
+div#header_wrapper {
+position: relative;
+width: 949px;
+min-height: 79px;
+background: url(images/footer_header_middle.jpg) top center repeat-y;
+overflow: auto;
+}
+
+div#header_top {
+z-index: 3;
+position: absolute;
+top: 0px;
+width: 949px;
+height: 52px;
+background: url(images/footer_header_top.jpg) top center no-repeat;
+}
+
+div#header_bottom {
+z-index: 3;
+position: absolute;
+bottom: 0px;
+width: 949px;
+height: 26px;
+background: url(images/footer_header_bottom.jpg) top center no-repeat;
+}
+
+div#menu {
+z-index: 4;
+position: relative;
+width: 949px;
+padding-top: 28px;
+color: #ffffff;
+font-size: 16px;
+text-align: center;
+font-weight: bold;
+}
+
+div#menu span {
+margin: 0px 25px 0px 25px;
+}
+
+div#wrapper3 {
+z-index: 3;
+position: relative;
+width: 966px;
+padding: 10px 0px 10px 0px;
+min-height: 300px;
+overflow: auto;
+}
+
+div#column_left {
+position: relative;
+float: left;
+width: 170px;
+padding: 10px;
+min-height: 300px;
+overflow: hidden;
+}
+
+div#column_middle {
+position: relative;
+float: left;
+width: 546px;
+min-height: 300px;
+padding: 10px;
+overflow: auto;
+}
+
+div#column_right {
+position: relative;
+float: left;
+width: 170px;
+padding: 10px;
+min-height: 300px;
+overflow: hidden;
+}
+
+div#footer_wrapper {
+position: relative;
+width: 949px;
+min-height: 79px;
+background: url(images/footer_header_middle.jpg) top center repeat-y;
+overflow: auto;
+}
+
+div#footer_top {
+z-index: 3;
+position: absolute;
+top: 0px;
+width: 949px;
+height: 52px;
+background: url(images/footer_header_top.jpg) top center no-repeat;
+}
+
+div#footer_bottom {
+z-index: 3;
+position: absolute;
+bottom: 0px;
+width: 949px;
+height: 26px;
+background: url(images/footer_header_bottom.jpg) top center no-repeat;
+}
+
+div#footer {
+z-index: 4;
+position: relative;
+width: 919px;
+padding: 15px;
+color: #ffffff;
+text-align: center;
+}
+
+div#background_middle {
+z-index: 1;
+position: absolute;
+width: 100%;
+top: 0px;
+height: 100%;
+background: url(images/main_middle.jpg) top center repeat-y;
+}
+
+div#background_top {
+z-index: 2;
+position: absolute;
+width: 100%;
+top: 0px;
+height: 200px;
+background: url(images/main_top.jpg) top center repeat-y;
+}
+
+div#background_bottom {
+z-index: 2;
+position: absolute;
+width: 100%;
+bottom: 0px;
+height: 200px;
+background: url(images/main_bottom.jpg) bottom center repeat-y;
+}
+
+div#website_name {
+z-index: 4;
+position: absolute;
+width: 640px;
+top: 70px;
+left: 50%;
+margin-left: -260px;
+text-align: right;
+color: #ffffff;
+font-size: 26px;
+}
+
+a:link {
+color: #145989;
+text-decoration: none;
+}
+
+a:visited {
+color: #145989;
+text-decoration: none;
+}
+
+a:hover {
+color: #000000;
+text-decoration: none;
+}
+
+a:active {
+color: #145989;
+text-decoration: none;
+}
+
+#menu a:link {
+color: #ffffff;
+text-decoration: none;
+}
+
+#menu a:visited {
+color: #ffffff;
+text-decoration: none;
+}
+
+#menu a:hover {
+color: #000000;
+text-decoration: none;
+}
+
+#menu a:active {
+color: #ffffff;
+text-decoration: none;
+}
+
+/* Hide icons in page headings */
+#pageIcon, td.pageHeading img {
+display: none;
+}
+
+h1 {
+font-size: 14px;
+font-weight: bold;
+}
+h2 {
+font-size: 13px;
+font-weight: bold;
+}
+h3 {
+font-size: 12px;
+font-weight: bold;
+}
+h4 {
+font-size: 12px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 12px;
+}
+
+td.infoBoxHeading {
+padding-top: 10px; 
+padding-bottom: 0px;
+font-size: 13px;
+font-weight: bold;
+}
+
+td.pageHeading {
+padding: 0px;
+font-size: 20px;
+font-weight: bold;
+}
+
+div#navigation {
+margin-top: 0px;
+margin-bottom: 15px;
+color: #000000;
+}
+
+div.infobox_heading {
+
+width: 100%;
+font-size: 13px;
+
+font-weight: bold;
+
+}
+
+
+
+div.infobox_content {
+
+width: 100%;
+
+}
+
+
+
+div#column_right table.infoBox, div#column_left table.infoBox {
+width: 170px;
+overflow: hidden;
+}
+
+td.infoBoxHeading img, td.infoBoxHeading img {
+display: none;
+}
+
+td.infoBoxHeading a img, td.infoBoxHeading a img {
+display: inline;
+}
+
+div#column_middle td.infoBoxHeading {
+padding: 0px 0px 10px 0px;
+}
+
+td.main textarea {
+height: 200px; 
+width: 370px;
+}

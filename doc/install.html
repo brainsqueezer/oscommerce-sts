@@ -1,0 +1,391 @@
+<style>
+<!--
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	}
+ol
+	{margin-bottom:0cm;}
+.style2 {
+	font-size: 12.0pt;
+	font-family: Arial;
+	margin: 5.0pt 0cm;
+}
+-->
+</style>
+<p><font size="5"><b>STS v4.6 Installation instructions</b></font></p>
+<p>By: Bill Kellum</p>
+<p>Bkellum, <a href="http://www.soundsgoodpro.com">www.soundsgoodpro.com</a> 
+February 12, 2010</p>
+<p>&nbsp;</p>
+<p>Table of contents</p>
+<p>1. <a href="#what is">What is STS?</a></p>
+<p>2. <a href="#installation">Installation</a></p>
+<p>3. <a href="#configuration">Configuration</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1><b><a name="what is"></a>1. What is STS?</b></h1>
+<p>STS (Simple Template System) is a template system for osCommerce 2.2MS2, 2.2RC1 
+and 2.2RC2. Changing the look of your store has never been so easy! In its most 
+simple form, STS allows to change the look of the store by modifying only one 
+html file. STS is ranking 3rd in the download list and is nowadays a very 
+popular contribution.</p>
+<p>STS 2 &amp; 3 developed by Brian Gallagher @ DiamondSea.com<br>
+STS4 developed by Christophe Buchi aka &quot;Rigadin2&quot; @ 
+<a href="http://www.osc-help.net">www.osc-help.net</a><br>
+STS4.5.8 modified by Bill Kellum aka &quot;bkellum&quot; @
+<a href="http://www.soundsgoodpro.com">www.soundsgoodpro.com</a> <br>STSv4.6 
+developed by Bill Kellum aka &quot;bkellum&quot; @ <a href="http://www.soundsgoodpro.com">
+www.soundsgoodpro.com</a> </p>
+<p></p>
+<h3><b>1.1 </b>Support forum</h3>
+<p class="MsoNormal" style="text-autospace: none; font-size: 12.0pt; font-family: Times New Roman; margin: 5.0pt 0cm">
+<span style="font-family:Arial">The official STSv4 support forum is located 
+here:
+<a href="http://forums.oscommerce.com/topic/295660-contribution-sts-v4/page__st__5480" target="_blank">
+http://forums.oscommerce.com/topic/295660-contribution-sts-v4</a> . Please only post 
+problems related to STS v4, not to previous versions.</span></p>
+<p class="style2" style="text-autospace: none; ">
+The STS Support thread is really long so if you want to skip to the section that 
+begins to discuss STSv4.6, use the following link:<br>
+&nbsp;<a href="http://forums.oscommerce.com/topic/295660-contribution-sts-v4/page__view__findpost__p__1482323">STSv4.6 
+Thread Begins Here</a></p>
+<p class="style2" style="text-autospace: none; ">
+&nbsp;</p>
+<h3>1.2 Changelog</h3>
+<p>You can check the changelog <a href="changelog.html">here</a>.</p>
+<p><strong>Note for STSv4.5.8 Users: </strong>To upgrade to v4.6, I suggest that 
+you save your sts_user_code.php file and any other modifications you may have 
+made to any STS files. Then, upload all the files included with STSv4.6 within 
+the &quot;STS&quot; folder. This will provide you with all of the bug fixes and new 
+templates included with STSv4.6. You will also need to make the modifications to 
+the catalog/admin/modules.php file to bring your v4.5.8 to v4.5.6. Last but not 
+least, dump the old STS User Manual for the new V4.6 User Manual. <strong>
+**Before you upload the new STS files and make any modifications, please DISABLE 
+your STS Default Module in the Admin. This will prevent any refresh issues after 
+your installation is complete.</strong></p>
+<h3>1.3 STS User Manual</h3>
+<p>You can read the STS User Manual <a href="STS%20User%20Manual.doc">here</a>.</p>
+<p>&nbsp;</p>
+<h1>&nbsp;</h1>
+<h1><b><a name="installation"></a>2. Installation:</b></h1>
+<h3><b>2.1 The package contains</b>:</h3>
+<p>The package contains 5 folders</p>
+<ul>
+  <li>Folder &quot;STS&quot;: STS files.</li>
+  <li>Folder &quot;Files for MS2&quot;: files to copy over a fresh osCommerce 2.2MS2 (060817) installation.</li>
+  <li>Folder &quot;Files for RC1&quot;: files to copy over a fresh osCommerce Online Merchant 2.2RC1 installation.</li>
+	<li>Folder &quot;Files for RC2&quot;: files to copy over a fresh osCommerce Online Merchant 2.2RC2 installation.</li>
+  <li>Folder &quot;Doc&quot; contains this file as well as other documents for the use of 
+  STS.</li>
+</ul>
+<p class="MsoNormal">If you have not yet upgraded your osCommerce store to 
+osCommerce Online Merchant RC2a, you are welcome to do so as there are several 
+security patches. Go to “<a href="http://oscommerce.com/downloads" style="font-family: Times New Roman; color: blue; text-decoration: underline; text-underline: single">http://oscommerce.com/downloads</a>” 
+to get it.</p>
+<h3>2.2 Backup files and DB</h3>
+<p>Backup your store and database before installing STS, so if you screw up 
+something you can come back to a working version. This is generally a good way 
+to work.</p>
+<h3>2<b>.3 Copy new files</b></h3>
+<p>From the &quot;STS&quot; folder, copy the new files to your store:</p>
+<ul>
+  <li>
+  <p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">
+  catalog\includes\classes\sts.php</li>
+  <li>
+  <p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">
+  catalog\includes\functions\sts.php</li>
+  <li>
+  <p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">
+  folder catalog\includes\languages\english\modules\sts (plus all other 
+  languages you may have in your setup)</li>
+  <li>
+  <p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">
+  folder catalog\includes\modules\sts</li>
+  <li>
+  <p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">
+  folder catalog\includes\modules\sts_inc</li>
+  <li>
+  <p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">
+  folder catalog\includes\sts_templates</li>
+</ul>
+<h3>2.4 Modify osCommerce files</h3>
+<p>The following osCommerce files are modified by STS:</p>
+<p><strong>Note:</strong> If you have a fresh 
+install of osCommerce 2.2MS2, you can take the files from the &quot;Files for MS2&quot; 
+folder and copy them over your installation. If you have a fresh install of 
+osCommerce Online Merchant 2.2RC1, you can take the files from the &quot;Files for 
+RC1&quot; folder and copy them over your installation. If you have a fresh 
+install of osCommerce Online Merchant 2.2RC2a, you can take the files from the 
+&quot;Files for RC2&quot; folder and copy them over your installation. If you already 
+have 
+contributions installed, you can make the changes manually (They are all described in the 
+next chapters). <strong>When installation is completed, go to </strong>
+<a href="#configuration"><strong>chapter 3</strong></a><strong> for the configuration.</strong></p>
+<ul>
+	<li>
+	<p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">catalog\admin\modules.php</li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">catalog\admin\includes\boxes\modules.php</li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">catalog\admin\includes\languages\english.php (plus all other languages you may 
+  have in your setup)</li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">catalog\admin\includes\languages\english\modules.php (plus all other languages 
+  you may have in your setup)</li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">catalog\includes\application_bottom.php</li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">catalog\includes\application_top.php</li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">catalog\includes\column_left.php</li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">catalog\includes\column_right.php</li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">catalog\includes\footer.php</li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">catalog\includes\header.php</li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">catalog\includes\classes\boxes.php</li>
+	<li>
+	<p class="MsoNormal" style="text-indent: -18.0pt; text-autospace: none; margin-left: 36.0pt; margin-right: 0cm; margin-top: 5.0pt; margin-bottom: 5.0pt">catalog\includes\functions\html_output.php</li>
+</ul>
+<h3><b>2.5 Manual installation in the admin side</b></h3>
+<p>If you don't have a fresh installation of osCommerce, you can make the 
+changes manually, they are the same for osCommerce 2.2 versions (2.2MS2, 
+2.2RC1 and 2.2RC2).</p>
+<h4>2.5<b>.1 catalog/admin/modules.php</b></h4>
+<p>Find:</p>
+<p>
+  <textarea rows="2" name="S1" cols="64">switch ($set) {</textarea></p>
+<p>Add after</p>
+<p>
+  <textarea rows="9" name="S1" cols="64">// START STS 4.1
+case 'sts':
+$module_type = 'sts';
+$module_directory = DIR_FS_CATALOG_MODULES . 'sts/';
+$module_key = 'MODULE_STS_INSTALLED';
+define('HEADING_TITLE', HEADING_TITLE_MODULES_STS); 
+break;
+// END STS 4.1
+</textarea></p>
+<p>Find:</p>
+<p>
+  <textarea rows="2" name="S2" cols="64">          eval('$keys .= ' . $value['set_function'] . "'" . $value['value'] . "', '" . $key . "');");
+        } else {</textarea></p>
+<p>Replace with:</p>
+<p>
+  <textarea rows="9" name="S3" cols="64">          eval('$keys .= ' . $value['set_function'] . "'" . $value['value'] . "', '" . $key . "');");
+		// STS V4.6 drop start
+        } else {
+			if($key == 'MODULE_STS_TEMPLATE_FOLDER'){
+				$dir_name = array();
+				if ($handle = opendir('../'.MODULE_STS_TEMPLATES_FOLDER.'/')) {
+				   while (false !== ($file = readdir($handle))) {
+						$pos = strpos($file, ".");
+						if($pos === false){
+							$dir_name[] = array("id" => $file, "text" => $file);
+							$i++;
+						}
+					}
+					closedir($handle);
+				}
+				$keys .= tep_draw_pull_down_menu('configuration[MODULE_STS_TEMPLATE_FOLDER]', $dir_name, $value['value']);
+			}else{
+				$keys .= tep_draw_input_field('configuration[' . $key . ']', $value['value']);
+			}
+        }
+		// STS V4.6 drop end
+</textarea></p>
+<h4><b>2.5.2 catalog/admin/includes/languages/english.php</b></h4>
+<p>Add at the end:</p>
+<p>
+  <textarea rows="4" name="S1" cols="64">//START STS 4.1
+define('BOX_MODULES_STS', 'STS');
+//END STS 4.1</textarea></p>
+<p>Do the same for other languages in your setup.</p>
+<h4><b>2.5.3 catalog/admin/includes/boxes/modules.php</b></h4>
+<p>Find:</p>
+<p>
+  <textarea rows="2" name="S1" cols="143">'<a href="' . tep_href_link(FILENAME_MODULES, 'set=payment', 'NONSSL') . '" class="menuBoxContentLink">' . BOX_MODULES_PAYMENT . '</a><br>' .</textarea></p>
+<p>Add after</p>
+<p>
+  <textarea rows="4" name="S1" cols="143">// START STS 4.1
+'<a href="' . tep_href_link(FILENAME_MODULES, 'set=sts', 'NONSSL') . '" class="menuBoxContentLink">' . BOX_MODULES_STS . '</a><br>' .
+// END STS 4.1
+</textarea></p>
+<p>&nbsp;</p>
+<h4><b>2.5.4 catalog/admin/includes/languages/english/modules.php</b></h4>
+<p>Add at the end:</p>
+<p>
+  <textarea rows="4" name="S1" cols="64">//START STS 4.1
+define('HEADING_TITLE_MODULES_STS', 'STS Modules');
+//END STS 4.1</textarea></p>
+<p>Do the same for other languages in your setup.</p>
+<p>&nbsp;</p>
+<h3><b>2.6 Manual installation in the catalog side</b></h3>
+<h4>2.6<b>.1 includes/application_top.php</b></h4>
+<p>Find:</p>
+<p>
+  <textarea rows="4" name="S1" cols="64">// initialize the message stack for output messages
+  require(DIR_WS_CLASSES . 'message_stack.php');
+  $messageStack = new messageStack;
+</textarea></p>
+<p>Add before it:</p>
+<p>
+  <textarea rows="6" name="S1" cols="64">// START STS 4.5
+require (DIR_WS_CLASSES.'sts.php');
+$sts= new sts();
+$sts->start_capture();
+// END STS
+</textarea></p>
+<p>&nbsp;</p>
+<h4><b>2.6.2 includes/application_bottom.php</b></h4>
+<p>Add at the beginning:</p>
+<p>
+  <textarea rows="7" name="S1" cols="64">// START STS 4.4
+if ($sts->display_template_output) {
+$sts->stop_capture();
+include DIR_WS_MODULES.'sts_inc/sts_display_output.php';
+}
+//END STS 4.4
+</textarea></p>
+<p>&nbsp;</p>
+<h4><b>2.6.3 includes/header.php</b></h4>
+<p>Add at the beginning:</p>
+<p>
+  <textarea rows="4" name="S1" cols="64">// START STS 4.1
+$sts->restart_capture ('applicationtop2header');
+// END STS 4.1
+</textarea></p>
+<p>&nbsp;</p>
+<h4><b>2.6.4 includes/column_left.php</b></h4>
+<p>Add at the beginning:</p>
+<p>
+  <textarea rows="6" name="S1" cols="64">// START STS 4.1
+if ($sts->display_template_output) {
+include DIR_WS_MODULES.'sts_inc/sts_column_left.php';
+} else {
+//END STS 4.1
+</textarea></p>
+<p>Add at the end:</p>
+<p>
+  <textarea rows="4" name="S1" cols="64">// START STS 4.1
+}
+// END STS 4.1
+</textarea></p>
+<p>&nbsp;</p>
+<h4><b>2.6.5 includes/column_right.php</b></h4>
+<p>Add at the beginning:</p>
+<p>
+  <textarea rows="6" name="S1" cols="64">// START STS 4.1
+if ($sts->display_template_output) {
+$sts->restart_capture ('content');
+} else {
+//END STS 4.1
+</textarea></p>
+<p>Add at the end:</p>
+<p>
+  <textarea rows="4" name="S1" cols="64">// START STS 4.1
+}
+// END STS 4.1
+</textarea></p>
+<p>&nbsp;</p>
+<h4><b>2.6.6 includes/footer.php</b></h4>
+<p>Add at the beginning:</p>
+<p>
+  <textarea rows="8" name="S1" cols="64">// START STS 4.5
+if ($sts->display_template_output) {
+// Get content here, in case column_right is not called.
+if (!isset($sts->template['content']))
+  $sts->restart_capture ('content');
+} else {
+//END STS
+</textarea></p>
+<p>Add at the end:</p>
+<p>
+  <textarea rows="4" name="S1" cols="64">// START STS 4.1
+}
+// END STS 4.1
+</textarea></p>
+<p>&nbsp;</p>
+<h4>2.6.7<b> includes/functions/html_output.php</b></h4>
+<p>Note: the modifications in this file allows to use images located in the 
+templates folder instead of the images in the original catalog/images folder. This is 
+done by checking if the image exists or not in the templates folder, and to use 
+it if yes. If you are not going to use this feature, you don't need to modify 
+this file.</p>
+<p>Find:</p>
+<p>
+  <textarea rows="2" name="S1" cols="87">function tep_image($src, $alt = '', $width = '', $height = '', $parameters = '') {</textarea></p>
+<p>Add after:</p>
+<p>
+  <textarea rows="6" name="S1" cols="87">// START STS v4.4:
+global $sts; 
+$sts->image($src); // Take image from template folder if exists.
+// END STS v4.4</textarea></p>
+<p>&nbsp;</p>
+<p>Find:</p>
+<p>
+  <textarea rows="2" name="S1" cols="45">$image_submit = '<input type="image" src=</textarea></p>
+<p>Add before:</p>
+<p>
+  <textarea rows="8" name="S1" cols="131">// START STS v4.4:
+global $sts;
+$src = $sts->image_button($image,$language);
+if ($src!='')
+  $image_submit = '<input type="image" src="' . tep_output_string($src) . '" border="0" alt="' . tep_output_string($alt) . '"';
+else 
+// END STS v4.4
+</textarea></p>
+<p>&nbsp;</p>
+<p>Find:</p>
+<p>
+  <textarea rows="3" name="S1" cols="68">  function tep_image_button($image, $alt = '', $parameters = '') {
+    global $language;
+</textarea></p>
+<p>Add after:</p>
+<p>
+  <textarea rows="8" name="S1" cols="127">// START STS v4.4:
+global $sts;
+$src = $sts->image_button($image, $language, true); // 3rd parameter to tell tep_image that file check has been already done
+if ($src!='') { // Take image from template folder if exists.
+  return tep_image ($src);
+}
+// END STS v4.4
+</textarea></p>
+<p>
+  &nbsp;</p>
+<h4>2.6.8 includes/classes/boxes.php</h4>
+<p>There is no manual edit for this file, backup the original file, then copy 
+the file delivered with STS to your store. This file allows the use of templates 
+for the infoboxes. If you are not going to use this option, you don't need this 
+file. Some people already have heavily modified this file to get infoboxes like 
+they wanted, so for them there is no reason to use infobox templates, so no 
+reason to use the file delivered with STS. It is highly recommended that you do 
+make these edits as third party STS Template Designers will surely take 
+advantage of this STS feature.</p>
+<p>&nbsp;</p>
+<h1><a name="configuration"></a>3. Configuration</h1>
+<p>After installation, STS is disabled. You can enable STS as well as optional 
+features from the admin side, like you do with payment or shipping modules.</p>
+<p><img border="0" src="images/Admin%20modules.gif" width="717" height="242"></p>
+<p>STS is delivered with 4 modules (see the picture above). The logic to 
+detect which template must be used for which page is made inside these modules.</p>
+<p>- Default module: must be installed and enabled in order to use STS. Read 
+more <a href="module_default.html">here</a>.<br>
+- Index module takes care of templates for the index.php page, when you have 
+different templates for different categories or manufacturers. Read more
+<a href="module_index.html">here</a>.<br>
+- Product Info module takes care of templates for the product_info.php page. 
+Read more <a href="module_product_info.html">here</a>.<br>
+- Popup Image module takes care of template for the popup_image.php page. Read 
+more <a href="module_popup_image.html">here</a>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

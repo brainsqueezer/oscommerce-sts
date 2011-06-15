@@ -1,0 +1,105 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="fi">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<h3><font face="Arial">STS module configuration: default module</font></h3>
+<p><b>Version</b>: v2.1.2<br>
+<b>File</b>: catalog/includes/modules/sts/sts_default.php<br>
+<b>Author</b>: Bill Kellum aka BKellum</p>
+<p><font face="Arial">This is the main module; it must be installed in order to 
+use STS.</font></p>
+<p><img border="0" src="images/default_2_1_1.gif" width="224" height="586"></p>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="15%"><b>Parameter</b></td>
+    <td width="85%"><b>Comment</b></td>
+  </tr>
+  <tr>
+    <td width="15%">Use Templates?</td>
+    <td width="85%"><font face="Arial">Select 'True' to use STS, or 'False' to 
+    use the stock version of osCommerce.</font></td>
+  </tr>
+  <tr>
+    <td width="15%"><font face="Arial">Code for debug output</font></td>
+    <td width="85%"><font face="Arial">Enter the code here that will 
+  enable you to see debug information on your pages by adding
+  <span style="color:blue">?sts_debug=[this code]</span> in the URL of the page 
+  you want to debug. If STS is disabled, the URL trick still works; meaning, you 
+  are the only one to see the STS version of your shop.</font></td>
+  </tr>
+  <tr>
+    <td width="15%">Files for normal template</td>
+    <td width="85%"><font face="Arial">When the default template 
+  is used, the files listed here will be included during process of the script. 
+    Those files must be located in “catalog/includes/modules/sts_inc” folder and 
+    generally contains code to build extra placeholders. <br>
+    For example: <br>
+    By default the file sts_user_code is included, but if you don't use any 
+    placeholder defined inside this file, just remove it from the list. On the 
+    other hand, if you add a contribution which adds some new placeholders, like 
+    the famous Header Tags Controller, then you only need to add the file in the 
+    list. The files must be separated by semicolons.<br>
+	<br>
+    Note: New placeholders can also be defined in sts_user_code.php instead of 
+    creating new files to include. The choice is up to you.</font></td>
+  </tr>
+  <tr>
+    <td width="15%">Base folder</td>
+    <td width="85%"><font face="Arial">The folder inside your 
+catalog where the templates sets (or template folders) are located. Default 
+value is &quot;includes/sts_templates/” so you'll have your template folders inside 
+&quot;catalog/includes/sts_templates&quot;.</font></td>
+  </tr>
+  <tr>
+    <td width="15%">Template folder</td>
+    <td width="85%"><font face="Arial">The folder inside the 
+base folder where templates will be read. Default value i<span lang="en-us">s</span> &quot;single&quot;, a folder with 
+only 1 template, good for a start. Change to &quot;multiple&quot; when you 
+	<span lang="en-us">are</span> more <span lang="en-us">familiar with </span>STS, 
+because it contains several templates for different pages<span lang="en-us"> and 
+	infoboxes. Simply select the template set from the provided drop down menu.</span></font></td>
+  </tr>
+  <tr>
+    <td width="15%">Default template file</td>
+    <td width="85%">The default template used if no specific template for the 
+    page is found. </td>
+  </tr>
+  <tr>
+    <td width="15%">Use template for infoboxes</td>
+    <td width="85%">Set to true if you want to use html templates for your 
+    infoboxes, false otherwise. To use this option, you need to have installed 
+    the includes/classes/boxes.php file that comes with STS.<br>
+	<span lang="en-us"><strong>Note: You need a folder called &quot;boxes&quot; inside your 
+	templates folder in which you place your infobox template files.</strong></span></td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+<p><b>How it works</b>:</p>
+<p>The default module is used when no enabled module is found for the displayed 
+page. Templates must be located in the templates folder 
+(includes/sts_templates/single by default). If the module for the displayed page 
+is enabled, STS will use it to decide what template to use. In this case, refer 
+to the module documentation to know how it works. Example: if the displayed page 
+is index.php, STS will look if the index module is enabled in admin and will use 
+it if yes. Otherwise the default module is used and its logic is as follow<span lang="en-us">s</span> 
+(first found first used):</p>
+<p>1. If page name contains the word &quot;popup&quot; or &quot;info_shopping_cart&quot;, STS is 
+disabled and no template will be used.</p>
+<p>2. Use <b><i>pagename</i>.php.html</b> if exists. (Example: <b>login.php.html</b> 
+for the page login.php).</p>
+<p>3. Use default template like defined in parameter &quot;Default template file&quot; (by 
+default it is <b>sts_template.html</b>).</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

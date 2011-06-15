@@ -1,0 +1,6 @@
+﻿/* STS Test Template */
+
+/* Hide icons in page headings */
+#pageIcon, td.pageHeading img {
+display: none;
+}

@@ -1,0 +1,498 @@
+﻿@charset "utf-8";
+
+/* CSS Document
+
+    Copyright (c) Freeoscommerce.com 2009
+
+	This file is part of a freeoscommerce.com template.  Please visit http://www.freeoscommerce.com for licensing and other information.
+*/
+
+html {
+height: 100%;
+} 
+
+body {
+margin: 0px;
+background: #4de5e5;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 12px;
+}
+
+div#wrapper1 {
+z-index: 3;
+position: relative;
+top: 149px;
+left: 50%;
+margin-left: -501px;
+width: 1003px;
+min-height: 600px;
+padding-bottom: 40px;
+}
+
+div#wrapper2 {
+z-index: 4;
+position: relative;
+top: 0px;
+left: 38px;
+width: 927px;
+min-height: 600px;
+background: #ffffff;
+}
+
+div#header_wrapper {
+z-index: 5;
+position: relative;
+top: 9px;
+left: 9px;
+width: 908px;
+min-height: 71px;
+margin-bottom: 18px;
+}
+
+div#header {
+z-index: 7;
+position: relative;
+top: 0px;
+padding: 12px;
+}
+
+div#top_menu {
+z-index: 8;
+position: relative;
+padding-top: 12px;
+width: 100%;
+text-align: center;
+color: #ffffff;
+font-size: 15px;
+}
+
+div#header_background1 {
+z-index: 5;
+position: absolute;
+top: 0px;
+bottom: 0px;
+width: 908px;
+background: #00534e;
+}
+
+div#header_background2 {
+
+z-index: 6;
+
+position: absolute;
+
+top: 0px;
+
+height: 71px;
+
+width: 908px;
+
+background: url(images/header_footer_background.jpg) top center repeat-x;
+
+}
+
+
+
+div#wrapper3 {
+
+width: 908px;
+
+overflow: auto;
+
+position: relative;
+
+background: url(images/content_background.jpg) top center repeat-y;
+
+left: 9px;
+
+margin-bottom: 9px;
+
+}
+
+
+
+div#content_wrapper {
+
+float: left;
+
+position: relative;
+
+left: 187px;
+
+width: 515px;
+
+min-height: 443px;
+
+margin-left: 9px;
+
+}
+
+
+
+div#content {
+
+position: relative;
+
+top: 0px;
+
+padding: 12px;
+
+width: 491px;
+
+overflow: hidden;
+
+}
+
+
+
+div#left_sidebar_wrapper {
+
+float: left;
+
+position: relative;
+
+left: -525px;
+
+width: 187px;
+
+min-height: 443px;
+
+background: url(images/sidebar_background.jpg) top center repeat-x;
+
+}
+
+
+
+div#left_sidebar {
+
+position: relative;
+
+top: 0px;
+
+padding: 12px;
+
+width: 163px;
+
+overflow: hidden;
+
+}
+
+
+
+div#right_sidebar_wrapper {
+
+float: left;
+
+width: 187px;
+
+min-height: 443px;
+
+margin-left: 10px;
+
+background: url(images/sidebar_background.jpg) top center repeat-x;
+
+}
+
+
+
+div#right_sidebar {
+
+position: relative;
+
+top: 0px;
+
+padding: 12px;
+
+width: 163px;
+
+overflow: hidden;
+
+}
+
+
+
+div#footer {
+
+z-index: 5;
+
+position: relative;
+
+left: 9px;
+
+width: 908px;
+
+min-height: 71px;
+
+padding-bottom: 9px;
+
+text-align: center;
+
+color: #ffffff;
+
+}
+
+
+
+div#footer_background1 {
+
+z-index: 6;
+
+position: absolute;
+
+top: 0px;
+
+bottom: 9px;
+
+left: 0px;
+
+width: 908px;
+
+background: #00534e;
+
+}
+
+
+
+div#footer_background2 {
+
+z-index: 7;
+
+position: absolute;
+
+top: 0px;
+
+left: 0px;
+
+height: 71px;
+
+width: 908px;
+
+background: url(images/header_footer_background.jpg) top center repeat-x;
+
+}
+
+
+
+div#footer_content {
+
+z-index: 8;
+
+position: relative;
+
+padding-left: 20px;
+
+padding-top: 10px;
+
+padding-bottom: 10px;
+
+width: 870px;
+
+min-height: 50px;
+
+}
+
+
+
+div#left_shadow {
+
+z-index: 4;
+
+position: absolute;
+
+left: 0px;
+
+top: 0px;
+
+width: 38px;
+
+height: 429px;
+
+background: url(images/left_shadow.jpg) top center no-repeat;
+
+}
+
+
+
+div#right_shadow {
+
+z-index: 4;
+
+position: absolute;
+
+right: 0px;
+
+top: 0px;
+
+width: 38px;
+
+height: 429px;
+
+background: url(images/right_shadow.jpg) top center no-repeat;
+
+}
+
+
+
+div#top_background {
+
+z-index: 2;
+
+position: absolute;
+
+top: 0px;
+
+width: 100%;
+
+height: 386px;
+
+background: url(images/top_background.jpg) top center no-repeat;
+
+}
+
+
+
+div#main_background {
+
+z-index: 1;
+
+position: absolute;
+
+top: 0px;
+
+width: 100%;
+
+height: 591px;
+
+background: url(images/main_background.jpg) top center repeat-x;
+
+}
+
+
+
+div#website_name {
+
+z-index: 8;
+
+position: absolute;
+
+top: 0px;
+
+color: #ffffff;
+
+text-align: right;
+
+width: 800px;
+
+top: 105px;
+
+left: 50%;
+
+margin-left: -400px;
+
+font-size: 24px;
+
+letter-spacing: 1.5px;
+
+}
+
+
+
+a:link {
+	color: #00534e;
+	text-decoration: none;
+}
+a:visited {
+	color: #00534e;
+	text-decoration: none;
+}
+a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+a:active {
+	color: #00534e;
+	text-decoration: none;
+}
+
+#top_menu a:link {
+	color: #ffffff;
+	text-decoration: none;
+}
+#top_menu a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+#top_menu a:hover {
+	color: #4de5e5;
+	text-decoration: none;
+}
+#top_menu a:active {
+	color: #ffffff;
+	text-decoration: none;
+}
+#top_menu span {
+margin-left: 12px;
+margin-right: 12px;
+}
+
+/* Hide icons in page headings */
+#pageIcon, td.pageHeading img {
+display: none;
+}
+
+h1 {
+font-size: 14px;
+font-weight: bold;
+}
+h2 {
+font-size: 13px;
+font-weight: bold;
+}
+h3 {
+font-size: 12px;
+font-weight: bold;
+}
+h4 {
+font-size: 12px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 12px;
+}
+
+hr.accessibility {
+height: 1px;
+color: #00534e;
+}
+
+td.infoBoxHeading {
+padding-top: 10px; 
+padding-bottom: 0px;
+font-size: 12px;
+font-weight: bold;
+}
+
+td.pageHeading {
+padding-top: 5px;
+padding-bottom: 10px;
+font-size: 14px;
+font-weight: bold;
+}
+
+div#navigation {
+margin-top: 0px;
+margin-bottom: 15px;
+color: #00534e;
+}
+
+div.infobox_heading {
+width: 100%;
+font-size: 12px;
+font-weight: bold;
+}
+
+div.infobox_content {
+width: 100%;
+}
